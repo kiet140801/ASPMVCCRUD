@@ -1,0 +1,33 @@
+﻿@model List<WEDASPNETCORECRUD.Models.Domail.Teacher>
+
+@{
+}
+
+<h1>Teachers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Salary</td>
+            <td>Date Of Birth</td>
+            <td>Deparment</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teacher in Model)
+        {
+            <tr>
+                <td>@teacher.Id</td>
+                <td>@teacher.Name</td>
+                <td>@teacher.Email</td>
+                <td>@teacher.Salary</td>
+                <td>@teacher.DateOfBirth.ToString("dd-MM-yyyy")</td>
+                <td>@teacher.Deparment</td>
+                <td><a href="Teachers/View/@teacher.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
